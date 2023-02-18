@@ -1,5 +1,4 @@
 document.getElementById('btn-rhombus').addEventListener('click', function () {
-	console.log('clicked button');
 	const sevenValue = updateNumberField('input-field-seven');
 	const eightValue = updateNumberField('input-field-eight');
 	const multiplications = sevenValue * eightValue;

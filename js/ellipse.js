@@ -2,13 +2,11 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 	const elevenValue = updateNumberField('input-field-eleven');
 	const twelveValue = updateNumberField('input-field-twelve');
 
-	const pi = 3.14;
+	const pi = 3.1416;
 	const multiplications = elevenValue * twelveValue;
 	const result = pi * multiplications;
 	const finalResult = result.toFixed(2);
 	console.log(finalResult);
-
-	// Added Value
 
 	const ellipseNumber = document.getElementById('ellipse-number');
 	const parallelogramNumberString = ellipseNumber.innerText;
