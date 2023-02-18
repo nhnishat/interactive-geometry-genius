@@ -6,15 +6,6 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 	const multiplications = elevenValue * twelveValue;
 	const result = pi * multiplications;
 	const finalResult = result.toFixed(2);
-	console.log(finalResult);
-
-	const ellipseNumber = document.getElementById('ellipse-number');
-	const parallelogramNumberString = ellipseNumber.innerText;
-	ellipseNumber.innerText = elevenValue;
-
-	const ellipseText = document.getElementById('ellipse-text');
-	const ellipseTextString = ellipseText.innerText;
-	ellipseText.innerText = twelveValue;
 
 	if (isNaN(elevenValue)) {
 		alert('please Give a Valid number');
