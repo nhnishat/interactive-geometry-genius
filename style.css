@@ -1,0 +1,18 @@
+.boxes {
+	height: 530px;
+	width: 370px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: whitesmoke;
+}
+
+.btn-calculate {
+	padding: 20px;
+	width: 280px;
+	background-color: #1090d8;
+	border-radius: 10px;
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+}
