@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- tailwind CDN Link -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- Css Link Style -->
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Geometry Genius</title>
+	</head>
+	<body>
+		<header
+			class="container mx-auto flex justify-between items-center p-5 bg-emerald-100 my-20"
+		>
+			<div>
+				<h1 class="text-5xl">
+					<span class="font-bold 'Inter',sans-serif;">Interactive </span>
+					<br />
+					Geometry Genius
+				</h1>
+			</div>
+			<div>
+				<button
+					id="btn-blog"
+					class="text-center bg-sky-600 text-white py-5 px-10 rounded-xl text-2xl"
+				>
+					Blog
+				</button>
+			</div>
+		</header>
+		<main class="container mx-auto">
+			<section class="mb-20 gap-5 flex flex2/2 flex flex-col md:flex-row">
+				<div class="grid grid-cols-1 md:grid-cols-3 w-4/4 gap-5">
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/triangle.png" alt="" />
+						<h2 class="mb-3 mt-5 font-bold text-4xl">Triangle</h2>
+						<h2 class="mb-3">
+							Area (A) = 0.5 x <span id="triangle-number">b</span> x
+							<span id="triangle-text">h</span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-one"
+									class="w-3/4 p-2 bg-gray-200 rounded-lg"
+									type="text"
+									placeholder="b"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-two"
+									class="w-3/4 p-2 bg-gray-200 rounded-lg"
+									type="text"
+									placeholder="h"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-triangle" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/rectangle.png" alt="" />
+						<h2 class="mb-3 mt-5 font-bold text-4xl">Rectangle</h2>
+						<h2 class="mb-3">
+							Area (A) = <span id="rectangle-number">w</span> x
+							<span id="rectangle-text">i</span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-three"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="w"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-four"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="i"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-rectangle" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/parallelogram.png" alt="" />
+						<h2 class="mb-5 mt-8 font-bold text-4xl">Parallelogram</h2>
+						<h2 class="mb-3">
+							Area (A) = <span id="parallelogram-number">b</span> x
+							<span id="parallelogram-text">h</span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-five"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="b"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-six"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="h"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-parallelogram" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/rhombus.png" alt="" />
+						<h2 class="mb-3 mt-5 font-bold text-4xl">Rhombus</h2>
+						<h2 class="mb-3">
+							<span>Area (A)</span> = 0.5 x
+							<span id="rhombus-number">d<sub>1</sub> </span> x
+							<span id="rhombus-text">d<sub>2</sub></span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-seven"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder=" d1"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-eight"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="d2"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-rhombus" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/pentagon.png" alt="" />
+						<h2 class="mb-3 mt-5 font-bold text-4xl">Pentagon</h2>
+						<h2 class="mb-3">
+							<span>Area (A)</span> = 0.5 x
+							<span id="pentagon-number">p</span> x
+							<span id="pentagon-text">b</span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-nine"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="p"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-ten"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="b"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-pentagon" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+					<div class="boxes drop-shadow-2xl rounded-lg p-10">
+						<img src="./images/ellipse.png" alt="" />
+						<h2 class="mb-3 mt-8 font-bold text-4xl">Ellipse</h2>
+						<h2 class="mb-3">
+							<span>Area (A)</span> =&pi; <span id="ellipse-number">(a</span>
+							<span id="ellipse-text">b)</span>
+						</h2>
+						<div class="flex mx-5">
+							<div class="input-box mb-5">
+								<input
+									id="input-field-eleven"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="a"
+								/>
+								<label for="">cm</label>
+							</div>
+
+							<div class="input-box mb-3">
+								<input
+									id="input-field-twelve"
+									class="w-3/4 p-2 rounded-lg bg-gray-200"
+									type="text"
+									placeholder="b"
+								/>
+								<label for="">cm</label>
+							</div>
+						</div>
+						<button id="btn-ellipse" class="btn-calculate mt-3 mb-3">
+							Calculate
+						</button>
+					</div>
+				</div>
+				<div class="boxes drop-shadow-2xl rounded-lg p-3">
+					<h2 class="text-2xl font-bold underline underline-offset-8 mb-4">
+						Area Calculation
+					</h2>
+					<ol>
+						<li id="triangle-result" class="flex justify-between items-center">
+							<div><h2 class="px-2">1.Triangle</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-one"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+						<li
+							id="triangle-result"
+							class="mt-5 flex justify-between items-center"
+						>
+							<div><h2 class="px-2">2.Rectangle</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-two"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+						<li
+							id="triangle-result"
+							class="mt-5 flex justify-between items-center"
+						>
+							<div><h2 class="px-2">3.Parallelogram</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-three"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+						<li
+							id="triangle-result"
+							class="mt-5 flex justify-between items-center"
+						>
+							<div><h2 class="px-2">4.Rhombus</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-four"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+						<li
+							id="triangle-result"
+							class="mt-5 flex justify-between items-center"
+						>
+							<div><h2 class="px-2">5.Pentagon</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-five"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+						<li
+							id="triangle-result"
+							class="mt-5 flex justify-between items-center"
+						>
+							<div><h2 class="px-2">6.Parallelogram</h2></div>
+							<div>
+								<h2 class="px-3 text-base">
+									<span id="value-six"></span> cm<sup>2</sup>
+								</h2>
+							</div>
+							<div>
+								<button class="px-2 bg-sky-500 text-white py-2 rounded-lg">
+									Covert to m<sup>2</sup>
+								</button>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</section>
+		</main>
+		<script src="./js/common.js"></script>
+		<script src="./js/blog.js"></script>
+		<script src="./js/triangle.js"></script>
+		<script src="./js/rectangle.js"></script>
+		<script src="./js/parallelogram.js"></script>
+		<script src="./js/rhombus.js"></script>
+		<script src="./js/pentagon.js"></script>
+		<script src="./js/ellipse.js"></script>
+	</body>
+</html>
